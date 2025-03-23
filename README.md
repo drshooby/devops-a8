@@ -1,11 +1,10 @@
 # devops-a8
 
-## Windows
-```bash
-$env:AWS_ACCESS_KEY_ID="your_access_key"
-$env:AWS_SECRET_ACCESS_KEY="your_secret_key"
-$env:AWS_SESSION_TOKEN="your_session_token"
+## How to Use
 
+1. Run `python3 setenv.py` and enter your credentials, then run the printed command for your system
+
+2. ```bash
 terraform init
 terraform plan
 terraform apply
