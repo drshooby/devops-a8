@@ -52,3 +52,8 @@ output "bastion_ssh_user" {
 output "bastion_private_ip" {
   value = module.bastion.private_ip
 }
+
+# EC2 Instance IDs
+output "ec2_instance_ids" {
+  value = aws_instance.machines[*].id
+}

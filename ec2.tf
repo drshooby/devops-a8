@@ -1,4 +1,3 @@
-
 resource "aws_security_group" "private_instances" {
   name        = "private-instances-sg"
   description = "Security group for private instances"
