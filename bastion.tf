@@ -32,7 +32,7 @@ module "bastion" {
     # }
   ]
   ssh_user                    = "ec2-user"
-  name                        = "bastion"
+  name                        = var.bastion_name
   associate_public_ip_address = true
   tags                        = var.resource_tags
 }

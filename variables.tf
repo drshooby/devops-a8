@@ -40,10 +40,10 @@ variable "public_key" {
   description = "Public key to be used for bastion host."
 }
 
-variable "bastion_prefix" {
+variable "bastion_name" {
   type       = string
   default    = "bastion-a8"
-  description = "Prefix for bastion host."
+  description = "Name for bastion host."
 }
 
 variable "resource_tags" {
