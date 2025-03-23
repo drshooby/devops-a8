@@ -72,3 +72,15 @@ variable "iam_instance_profile" {
   default     = "LabInstanceProfile"
   description = "IAM instance profile name."
 }
+
+variable "ec2_instance_names" {
+  type        = set(string)
+  default     = ["ec2-1", "ec2-2", "ec2-3", "ec2-4", "ec2-5", "ec2-6"]
+  description = "Names for 6 EC2 instances."
+}
+
+variable "packer_ami_id" {
+  type        = string
+  default     = "ami-08b5b3a93ed654d19" # Amazon Linux 2023, change when Packer is set up
+  description = "AMI ID from Packer."
+}
