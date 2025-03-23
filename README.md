@@ -11,7 +11,19 @@ terraform plan
 terraform apply
 ```
 
-Windows Lab User SSH
+## Required Variables
+- Create a terraform.tfvars if you don't already have one (key = "value" syntax)
+- The following variables must be set `public_key, bastion_allowed_cidr`
+- If not using `us-east-1` as your AWS region, please set `aws_region, aws_azs`
+- If not using the AWS Lab environment, please set `iam_instance_profile`
+- Other non-required variables can be seen in `variables.tf` (subnets and naming, defaults should be OK)
 
-- Run `ssh-keygen -y -f path\to\your-key.pem > path\to\your-key.pub` (should be labsuser from AWS lab) 
-- Then copy the key into terraform.tfvars (use `variables.tf` as a guide if needed)
+## SSH
+
+- Run `ssh-keygen -y -f /path/to/your-key.pem > /path/to/your-key.pub`
+- Then copy the key into terraform.tfvars
+
+## Useful Items
+
+- View instances from within the bastion `aws ec2 describe-instances --query "Reservations[].Instances[].[PrivateIpAddress,Tags[?Key=='Name'].Value|[0]]" --output table --region your-region`
+- Get your public IP <a href="https://www.whatsmyip.org/">What's My IP?</a>
