@@ -21,15 +21,15 @@ module "bastion" {
         "type": "ingress",
         "name": "ssh from my ip"
     },
-    # { # Allow outbound traffic if the bastion needs to reach the internet, but for this assignment it's commented out
-    # "cidr_blocks": ["0.0.0.0/0"],
-    # "description": "Allow all outbound traffic",
-    # "from_port": 0,
-    # "protocol": -1,
-    # "to_port": 0,
-    # "type": "egress",
-    # "name": "allow all outbound"
-    # }
+    {
+    "cidr_blocks": ["0.0.0.0/0"],
+    "description": "Allow all outbound traffic",
+    "from_port": 0,
+    "protocol": -1,
+    "to_port": 0,
+    "type": "egress",
+    "name": "allow all outbound"
+    }
   ]
   ssh_user                    = "ec2-user"
   name                        = var.bastion_name
