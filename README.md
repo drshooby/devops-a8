@@ -3,6 +3,7 @@
 ## How to Use  
 
 - Run `python3 setenv.py` and enter your credentials, then run the printed command for your system
+- Run the following commands to ensure the project is up-to-date, propoerly configured, then apply the changes in AWS
 
 ```bash
 terraform init
