@@ -1,6 +1,6 @@
 resource "aws_key_pair" "bastion-key" {
-    key_name   = var.ssh_key_name
-    public_key = var.public_key
+  key_name   = var.ssh_key_name
+  public_key = var.public_key
 }
 
 module "bastion" {
@@ -13,22 +13,22 @@ module "bastion" {
   instance_profile            = var.iam_instance_profile
   security_group_rules        = [
     {
-        "cidr_blocks": var.bastion_allowed_cidr,
-        "description": "Allow SSH from specific networks",
-        "from_port": 22,
-        "protocol": "tcp",
-        "to_port": 22,
-        "type": "ingress",
-        "name": "ssh from my ip"
+      "cidr_blocks": var.bastion_allowed_cidr,
+      "description": "Allow SSH from specific networks",
+      "from_port": 22,
+      "protocol": "tcp",
+      "to_port": 22,
+      "type": "ingress",
+      "name": "ssh from my ip"
     },
     {
-    "cidr_blocks": ["0.0.0.0/0"],
-    "description": "Allow all outbound traffic",
-    "from_port": 0,
-    "protocol": -1,
-    "to_port": 0,
-    "type": "egress",
-    "name": "allow all outbound"
+      "cidr_blocks": ["0.0.0.0/0"],
+      "description": "Allow all outbound traffic",
+      "from_port": 0,
+      "protocol": -1,
+      "to_port": 0,
+      "type": "egress",
+      "name": "allow all outbound"
     }
   ]
   ssh_user                    = "ec2-user"
