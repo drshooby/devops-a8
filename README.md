@@ -13,7 +13,7 @@ After following the instructions below these goals should be achieved and feel f
 
 ## How to Use  
 
-- Run `python3 setenv.py` and enter your credentials, then run the printed command for your system
+- Run `python3 setenv.py` and enter your credentials, then run the printed command for your system to set environment variables
 - Run the following commands **after** first checking out the required variables section to make sure everything runs smoothly
 
 ```bash
