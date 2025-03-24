@@ -36,7 +36,7 @@ variable "private_subnet_cidrs" {
 
 variable "public_key" {
   type        = string
-  default     = "ssh-rsa xxxxxxxxx"
+  default     = "~/.ssh/file.pem"
   description = "Public key to be used for bastion host."
 }
 
@@ -81,6 +81,6 @@ variable "ec2_instance_names" {
 
 variable "packer_ami_id" {
   type        = string
-  default     = "ami-08b5b3a93ed654d19" # Amazon Linux 2023, change when Packer is set up
+  default     = "ami-04316c678e0178760"
   description = "AMI ID from Packer."
 }
