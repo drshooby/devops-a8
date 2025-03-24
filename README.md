@@ -60,7 +60,7 @@ bastion_allowed_cidr = [ "xxx.xxx.xxx.xxx/32" ]
 
 ## Screenshots
 
-- How your instances should look on AWS GUI  
+- How the instances inside your VPC should look (from AWS GUI)
 <img width="194" alt="SCR-20250324-betz" src="https://github.com/user-attachments/assets/dc7e8eca-4d19-489e-8cb3-3587f5b965cc" />
 
 - Inside the bastion after running the aws command in the "Useful Items" section to view machines (ignore the "None", it's just a 'sticky' machine)  
