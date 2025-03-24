@@ -1,9 +1,8 @@
 import os
-import getpass
 
 aws_access_key = input("Enter AWS Access Key ID: ")
-aws_secret_key = getpass.getpass("Enter AWS Secret Access Key: ")
-aws_session_token = getpass.getpass("Enter AWS Session Token (if applicable): ")
+aws_secret_key = input("Enter AWS Secret Access Key: ")
+aws_session_token = input("Enter AWS Session Token (if applicable): ")
 
 os.environ["AWS_ACCESS_KEY_ID"] = aws_access_key
 os.environ["AWS_SECRET_ACCESS_KEY"] = aws_secret_key
