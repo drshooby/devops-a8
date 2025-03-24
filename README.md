@@ -52,7 +52,7 @@ bastion_allowed_cidr = [ "xxx.xxx.xxx.xxx/32" ]
 - How your instances should look on AWS GUI  
 <img width="194" alt="SCR-20250324-betz" src="https://github.com/user-attachments/assets/dc7e8eca-4d19-489e-8cb3-3587f5b965cc" />
 
-- Inside the bastion after running the aws command in the "Useful Items" section to view machines (ignore the "None" machine, it's just a 'sticky' machine)  
+- Inside the bastion after running the aws command in the "Useful Items" section to view machines (ignore the "None", it's just a 'sticky' machine)  
 <img width="285" alt="SCR-20250323-ubdq" src="https://github.com/user-attachments/assets/073adaad-7e8d-41d4-80fa-fd10d1a68692" />
 
 - Confirming docker availability after ssh'ing into one of the machines in the private subnet from the bastion 
