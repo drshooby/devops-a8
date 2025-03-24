@@ -56,7 +56,7 @@ bastion_allowed_cidr = [ "xxx.xxx.xxx.xxx/32" ]
 ## Useful Items
 
 - View instances and their private IPs (your 6 EC2's won't have public IPs) from within the bastion `aws ec2 describe-instances --query "Reservations[].Instances[].[PrivateIpAddress,Tags[?Key=='Name'].Value|[0]]" --output table --region your-region`
-- Get your public IP for setting bastion ssh rule: <a href="https://www.whatsmyip.org/">What's My IP?</a>
+- Get your public IP for setting bastion SSH rule: <a href="https://www.whatsmyip.org/">What's My IP?</a>
 
 ## Screenshots
 
@@ -66,7 +66,7 @@ bastion_allowed_cidr = [ "xxx.xxx.xxx.xxx/32" ]
 - Inside the bastion after running the aws command in the "Useful Items" section to view machines (ignore the "None", it's just a 'sticky' machine)  
 <img width="285" alt="SCR-20250323-ubdq" src="https://github.com/user-attachments/assets/073adaad-7e8d-41d4-80fa-fd10d1a68692" />
 
-- Confirming docker availability after ssh'ing into one of the machines in the private subnet from the bastion 
+- Confirming docker availability after SSH'ing into one of the machines in the private subnet from the bastion 
 ![SCR-20250323-ucwj](https://github.com/user-attachments/assets/f6fefcf4-2e3e-4450-9942-4b574ae66182)
 
 
