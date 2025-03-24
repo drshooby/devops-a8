@@ -63,10 +63,12 @@ bastion_allowed_cidr = [ "xxx.xxx.xxx.xxx/32" ]
 
 - Your VPC with specified CIDR and subnets
 <img width="1027" alt="image" src="https://github.com/user-attachments/assets/f40b6146-250c-436b-be61-4f0b58ed6472" />
-<img width="291" alt="image" src="https://github.com/user-attachments/assets/07d412bd-2397-4152-b07d-563dd8d1d5a9" />  
+<img width="291" alt="image" src="https://github.com/user-attachments/assets/07d412bd-2397-4152-b07d-563dd8d1d5a9" />
 
+- Bastion inbound security group rule
+<img width="356" alt="image" src="https://github.com/user-attachments/assets/a34f6e50-3e15-4f5e-9074-c50877de96a9" />  
 
-- How the instances inside your VPC should look (from AWS GUI)
+- How the instances inside your VPC should look
 <img width="194" alt="SCR-20250324-betz" src="https://github.com/user-attachments/assets/dc7e8eca-4d19-489e-8cb3-3587f5b965cc" />
 
 - Inside the bastion after running the aws command in the "Useful Items" section to view machines (ignore the "None", it's just a 'sticky' machine)  
