@@ -1,6 +1,6 @@
 # devops-a8
 
-## What is this
+## What is This
 
 This assignment is a Terraform + Packer setup for setting up the following Infrastructure:
 
