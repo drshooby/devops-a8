@@ -1,6 +1,6 @@
 resource "aws_key_pair" "bastion-key" {
   key_name   = var.ssh_key_name
-  public_key = var.public_key
+  public_key = file(var.public_key)
 }
 
 module "bastion" {
@@ -10,7 +10,7 @@ module "bastion" {
   vpc_id                      = module.vpc.vpc_id
   subnets                     = module.vpc.public_subnets
   key_name                    = var.ssh_key_name
-  instance_profile            = var.iam_instance_profile
+  instance_profile             = var.iam_instance_profile
   security_group_rules        = [
     {
       "cidr_blocks": var.bastion_allowed_cidr,
