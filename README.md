@@ -56,7 +56,7 @@ bastion_allowed_cidr = [ "xxx.xxx.xxx.xxx/32" ]
 ## Useful Items
 
 - View instances and their private IPs (your 6 EC2's won't have public IPs) from within the bastion `aws ec2 describe-instances --query "Reservations[].Instances[].[PrivateIpAddress,Tags[?Key=='Name'].Value|[0]]" --output table --region your-region`
-- Get your public IP <a href="https://www.whatsmyip.org/">What's My IP?</a>
+- Get your public IP for setting bastion ssh rule: <a href="https://www.whatsmyip.org/">What's My IP?</a>
 
 ## Screenshots
 
