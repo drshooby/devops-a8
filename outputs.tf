@@ -53,7 +53,13 @@ output "bastion_private_ip" {
   value = module.bastion.private_ip
 }
 
-# EC2 Instance IDs
-output "ec2_instance_ids" {
-  value = [for instance in aws_instance.machines : instance.id]
+# EC2 Instance Details
+output "ec2_instance_details" {
+  value = {
+    for name, instance in aws_instance.machines : 
+      name => {
+        id = instance.id
+        private_ip = instance.private_ip
+      }
+  }
 }
