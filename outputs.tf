@@ -55,5 +55,5 @@ output "bastion_private_ip" {
 
 # EC2 Instance IDs
 output "ec2_instance_ids" {
-  value = aws_instance.machines[*].id
+  value = [for instance in aws_instance.machines : instance.id]
 }
