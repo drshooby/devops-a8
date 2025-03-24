@@ -26,6 +26,7 @@ packer build .
 terraform init
 terraform plan
 terraform apply
+terraform destroy # when you're done
 ```
 
 ## Required Variables
