@@ -28,6 +28,11 @@ variable "ssh_pkey_file" {
   default = "~/.ssh/labsuser.pem"
 }
 
+# Run echo $HOME/.ssh/labsuser.pub to get the public key path
+variable "ssh_public_key_path" {
+  default = "/Users/yourname/.ssh/labsuser.pub"
+}
+
 source "amazon-ebs" "amazonlinux" {
   ami_name            = var.ami_name
   instance_type       = var.instance_type
@@ -61,7 +66,7 @@ build {
   }
   
   provisioner "file" {
-    source      = "~/.ssh/labsuser.pub"
+    source      = var.ssh_public_key_path
     destination = "/tmp/labsuser.pub"
   }
   
@@ -72,6 +77,15 @@ build {
       "cat /tmp/labsuser.pub >> ~/.ssh/authorized_keys",
       "chmod 600 ~/.ssh/authorized_keys",
       "rm /tmp/labsuser.pub"
+    ]
+  }
+
+  provisioner "shell" {
+    inline = [
+      "echo 'Verifying SSH key setup:'",
+      "cat ~/.ssh/authorized_keys",
+      "ls -la ~/.ssh",
+      "grep -c 'ssh-rsa' ~/.ssh/authorized_keys || echo 'No SSH keys found!'"
     ]
   }
 }
