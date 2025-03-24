@@ -3,7 +3,7 @@
 ## How to Use  
 
 - Run `python3 setenv.py` and enter your credentials, then run the printed command for your system
-- Run the following commands **after** first checking out the required variables to make sure everything runs smoothly
+- Run the following commands **after** first checking out the required variables section to make sure everything runs smoothly
 
 ```bash
 packer init .
@@ -22,9 +22,15 @@ terraform apply
 - The following variables must be set `public_key, bastion_allowed_cidr`
 - If not using `us-east-1` as your AWS region, please set `aws_region, aws_azs`
 - If not using the AWS Lab environment, please set `iam_instance_profile`
-- Please take a look at the variables in `ami.pkr.hcl` to make sure they are correct
+- Please take a look at the variables in `ami.pkr.hcl` to make sure they are correct like the path to your public key, for example.
 - Update the `packer_ami_id` variable after running the packer code and seeing your output ami
 - Other non-required variables can be seen in `variables.tf` (subnets and naming, defaults should be OK)
+
+```bash
+Example terraform.tfvars file:
+public_key = "~/.ssh/your-key-file.pub"
+bastion_allowed_cidr = [ "xxx.xxx.xxx.xxx/32" ]
+```
 
 ## SSH Setup
 - Run `ssh-keygen -y -f path/to/your-key.pem > path/to/your-key.pub`
