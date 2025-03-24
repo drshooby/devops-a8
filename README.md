@@ -1,5 +1,16 @@
 # devops-a8
 
+## What is this
+
+This assignment is a Terraform + Packer setup for setting up the following Infrastructure:
+
+1. VPC, private subnets, public subnets, and all necessary routes
+2. 1 bastion host in the public subnet to accept only your IP on port 22
+3. 6 EC2 instances in the private subnet using your new AMI created from Packer
+4. The AMI is Amazon Linux, having Docker preinstalled, and having your SSH public key set for private key login
+
+After following the instructions below these goals should be achieved and feel free to view the screenshots below for check-ins, good luck!
+
 ## How to Use  
 
 - Run `python3 setenv.py` and enter your credentials, then run the printed command for your system
