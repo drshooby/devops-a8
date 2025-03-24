@@ -66,7 +66,10 @@ bastion_allowed_cidr = [ "xxx.xxx.xxx.xxx/32" ]
 <img width="291" alt="image" src="https://github.com/user-attachments/assets/07d412bd-2397-4152-b07d-563dd8d1d5a9" />
 
 - Bastion inbound security group rule
-<img width="356" alt="image" src="https://github.com/user-attachments/assets/a34f6e50-3e15-4f5e-9074-c50877de96a9" />  
+<img width="356" alt="image" src="https://github.com/user-attachments/assets/a34f6e50-3e15-4f5e-9074-c50877de96a9" />
+
+- Custom AMI from Packer
+<img width="438" alt="image" src="https://github.com/user-attachments/assets/6b4eb832-e6af-447f-93fb-8e612f421e29" />  
 
 - How the instances inside your VPC should look
 <img width="194" alt="SCR-20250324-betz" src="https://github.com/user-attachments/assets/dc7e8eca-4d19-489e-8cb3-3587f5b965cc" />
