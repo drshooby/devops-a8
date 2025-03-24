@@ -60,6 +60,11 @@ bastion_allowed_cidr = [ "xxx.xxx.xxx.xxx/32" ]
 
 ## Screenshots
 
+- Your VPC with specified CIDR and subnets
+<img width="1027" alt="image" src="https://github.com/user-attachments/assets/f40b6146-250c-436b-be61-4f0b58ed6472" />
+<img width="291" alt="image" src="https://github.com/user-attachments/assets/07d412bd-2397-4152-b07d-563dd8d1d5a9" />  
+
+
 - How the instances inside your VPC should look (from AWS GUI)
 <img width="194" alt="SCR-20250324-betz" src="https://github.com/user-attachments/assets/dc7e8eca-4d19-489e-8cb3-3587f5b965cc" />
 
