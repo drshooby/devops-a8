@@ -33,7 +33,7 @@ terraform apply
 - The following variables must be set `public_key, bastion_allowed_cidr`
 - If not using `us-east-1` as your AWS region, please set `aws_region, aws_azs`
 - If not using the AWS Lab environment, please set `iam_instance_profile`
-- Please take a look at the variables in `ami.pkr.hcl` to make sure they are correct like the path to your public key, for example.
+- Please take a look at the variables in `ami.pkr.hcl` to make sure they are accurate and correct like the path to your public key, for example.
 - Update the `packer_ami_id` variable after running the packer code and seeing your output ami
 - Other non-required variables can be seen in `variables.tf` (subnets and naming, defaults should be OK)
 
